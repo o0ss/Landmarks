@@ -41,7 +41,11 @@ struct CategoryHome: View {
             .sheet(isPresented: $showingProfile) {
                 ProfileHost()
                     .environmentObject(modelData)
+                    .padding()
             }
+//            .onDisappear() {
+//                showingProfile = false
+//            }
         }
     }
 }
