@@ -30,7 +30,9 @@ struct LandmarkList: View {
                         LandmarkRow(landmark: landmark)
                     }
                 }
+                
             }
+            .animation(.default, value: showFavoritesOnly)
             .navigationTitle("Landmarks")
         }
     }

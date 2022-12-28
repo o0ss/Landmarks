@@ -24,7 +24,7 @@ struct HikeView: View {
         VStack {
             HStack {
                 HikeGraph(hike: hike, path: \.elevation)
-                    .frame(width: 50, height: 30)
+                    .frame(width: 60, height: 30)
 
                 VStack(alignment: .leading) {
                     Text(hike.name)
@@ -54,6 +54,7 @@ struct HikeView: View {
             if showDetail {
                 HikeDetail(hike: hike)
                     .transition(.moveAndFade)
+                    .padding(.top, 20)
             }
         }
     }

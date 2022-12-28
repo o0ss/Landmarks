@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Animation {
     static func ripple(index: Int) -> Animation {
-        Animation.spring(dampingFraction: 0.5)
+        Animation.spring(dampingFraction: 0.7)
             .speed(0.7)
             .delay(0.03 * Double(index))
     }
@@ -22,11 +22,11 @@ struct HikeGraph: View {
     var color: Color {
         switch path {
         case \.elevation:
-            return .gray
+            return .green
         case \.heartRate:
-            return Color(hue: 0, saturation: 0.5, brightness: 0.7)
+            return .red
         case \.pace:
-            return Color(hue: 0.7, saturation: 0.4, brightness: 0.7)
+            return .yellow
         default:
             return .black
         }
